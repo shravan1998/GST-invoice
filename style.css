@@ -1,0 +1,401 @@
+body,html{
+	height: 100%;
+}
+
+.parallax { 
+  /* The image used */
+  background-image: url("../gst_invoice/images/logo.jpg"); 
+  /* Full height */
+  height: 100%; 
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#my_head{
+	background-color: #6A5ACD;
+	border-radius: 20px;
+}
+
+#header_content{
+width: 99%;
+padding-top: 0.5px;
+font-size: 32px;
+font-family: Cinzel,Arial,Helvetica,sans-serif;
+border: 5px dotted black;
+border-radius: 20px;
+}
+
+#header_content h1{
+padding-left: 400px;
+}
+
+#navbar {
+  width:100%;
+  overflow: hidden;
+  background-color: #483D8B;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+#navbar a{
+  float: left;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  margin-left:6px;
+  margin-right: 6px;
+  font-family: Cinzel,Arial,Helvetica,sans-serif;
+}
+
+#navbar a:hover{
+	background-color: red;
+	color: black;
+}
+
+#content{
+	width: 70%;
+	margin: auto;
+	padding: 10px;
+	font-family: Cinzel,Arial,Helvetica,sans-serif;
+	font-size: 25px;
+	background-color: orange;
+	color: black;
+	border: 1px solid red;
+	border-radius: 20px;
+	margin-bottom: 50px;
+}
+
+#content ul{
+	list-style: none;
+}
+
+#content li{
+	width: 30%;
+	border: 2px solid black;
+	border-radius: 20px;
+	list-style: none;
+	text-decoration: none;
+	margin-left: 270px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 10px;
+	text-align: center;
+}
+
+#content a{
+	text-decoration: none;
+	color: black;
+}
+
+#content ul li:hover{
+	background-color: #f9f9f9;
+	color: black;
+}
+
+footer{
+  text-align: center;
+  background-color: #696969;
+  padding: 10px;
+  width: 100%;
+  margin: auto; 
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 20px;
+  line-height: 1em;
+}
+
+/*-----------------------------------------------------------------*/
+.main_space{
+ width: 100%;
+ margin-top: 50px;
+ margin-bottom: 70px;
+}
+
+.main_text{
+  padding-left: 20px;
+  width: 65%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 25px;
+  line-height: 1.6em;
+}
+
+.bottom_text{
+  padding-left: 20px;
+  width: 65%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 20px;
+  line-height: 1.6em;
+  margin-bottom: 50px;
+}
+
+.myform{
+  border-radius: 20px;
+  width: 50%;
+  padding: 20px;
+  padding-right: 5px;
+  margin: auto;
+  background-color: red;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.login_top_text{
+  font-family: Cambria,Arial,Helvetica,sans-serif;
+  font-size: 22px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.myform input[type="text"],input[type="email-id"],input[type="password"]{
+  font-size: 20px;
+  font-family: Cambria,Arial,Helvetica,sans-serif;
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.myform input[type="submit"]{
+  margin-left: 240px;
+  font-size: 20px;
+  padding: 10px;
+  width: 20%;
+  font-family: Cambria,Arial,Helvetica,sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  background-color: black;
+  color: white;
+}
+
+
+.myform input[type="submit"]:hover{
+  background-color: white;
+  color: black;
+}
+
+.register_text{
+  font-size: 23px;
+  padding-bottom: 5px;
+}
+
+
+
+/* The Modal (background) */
+.my_register .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 90%; /* Full width */
+  height: 90%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+  color: black;
+  margin-bottom: 60px;
+}
+
+
+/* Modal Content/Box */
+.my_register .modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
+}
+
+.my_register input{
+  background-color: #f9f9f9;
+  margin-left: 15px;
+  padding: 10px;
+  margin-top: 7px;
+}
+
+.outer_register_button{
+  margin-left: 240px;
+  font-size: 20px;
+  padding: 10px;
+  width: 20%;
+  font-family: Cambria,Arial,Helvetica,sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  background-color: green;
+  color: white;
+}
+
+.outer_register_button:hover{
+  background-color: #f9f9f9;
+  color: black;
+}
+
+
+.my_register .img_container{
+  width: 300px;
+  margin: auto;
+
+}
+
+.my_register .avatar{
+  width: 50%;
+  margin-left: 70px; 
+  border-radius: 50px;
+  color: black;
+  background-color: red;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cancelbtn{
+  margin-left: 20px;
+  background-color: black;
+  color: white;
+  width: 20%;
+  padding: 10px 10px;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 20px;
+}
+
+.inner_register_button{
+  font-size: 20px;
+  padding: 10px;
+  width: 20%;
+  font-family: Cambria,Arial,Helvetica,sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  background-color: green;
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.psw{
+  margin-left: 60px;
+  line-height: 1em;
+}
+
+
+/* The Close Button */
+.my_register .close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0; 
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.my_register .close:hover,.my_register.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.my_register .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+/*-------------------------------------------------------------*/
+ul{
+        padding: 20;
+        list-style: none;
+        background: yellow;
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 10px;
+        text-align: left;
+    }
+    ul li a{
+        display: block;
+        padding: 18px 25px;
+        color: #333;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: #fff;
+        background: #939393;
+    }
+    ul li ul.dropdown{
+        min-width: 20% ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
