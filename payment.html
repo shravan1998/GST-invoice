@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Payments</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Payment Details-Sales</h1>
+    </div>
+    <div class="sales-btn">
+        <button>Sales</button>
+    </div>
+    <div class="data" align="center">
+        <form>
+            Customer Name
+            <input list="customers" name="customer" id="customer">
+            <datalist id="customers"></datalist>&nbsp;&nbsp;&nbsp;
+            <button>Search</button>&nbsp;&nbsp;&nbsp;
+            <button>New</button>
+            <br>
+            INVOICE NUMBERS
+            <input list="invoicenos" name="invoiceno" id="invoice">
+            <datalist id="invoicenos"></datalist>
+
+        </form>
+    </div>
+    <style>
+    .header,.data,.sales-btn{
+        background-color: #F0E13D;
+        font-family: sans-serif;
+    }
+    .header{
+        padding-bottom: 50px;
+        padding-top:5px;
+        text-align: center;
+        
+    }
+    .sales-btn{
+        float:right;
+    }
+    button{
+        background-color: #45ED17;
+        font-family: sans-serif;
+        /*border:none;*/
+        border-radius: 2px;
+        width:100px;
+        height: 30px;
+    }
+    
+    .data #customer{
+        height:20px;
+        width: 500px;
+    }
+    #invoice{
+        height:20px;
+        width: 500px;
+        
+    }
+    
+    </style>
+</body>
+</html>
