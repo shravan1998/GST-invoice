@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Sales Report</title>
+</head>
+<body>
+    <div class="header" align="center">
+        <h1>Sales Report</h1>
+        <form>
+            Customer Name
+            <input list="customers" name="customer" id="customer">
+            <datalist id="customers"></datalist><br><br>
+            From
+            <input id="fromdate" name="fromdate" type="date">&nbsp;&nbsp;&nbsp;
+            To &nbsp;
+            <input id="todate" name="todate" type="date">&nbsp;&nbsp
+            <button>Submit</button>
+            <button>Excel</button>
+            <button>Close</button>
+        </form>
+    </div>
+    <style>
+    .header{
+        background-color: #F0E13D;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-family: sans-serif;
+    }
+    #customer{
+        width:500px;
+        height:20px;
+    }
+    button{
+        border-radius: 2px;
+        width:100px;
+        height: 30px;
+    }
+    </style>
+</body>
+</html>
