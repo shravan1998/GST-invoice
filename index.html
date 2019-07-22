@@ -1,127 +1,270 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>GST Invoicing</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body class="parallax">
-	
-	<header id="my_head">
-		
-		<div id="header_content">
-			<h1>GST Invoicing</h1>
-		</div>
-		
-		<nav>
-			<div id="navbar">
-				<a href="#" style="color: yellow; margin-left: 380px;">Quick Links:</a>
-			  	<a href="#">Invoicing</a> 
-				<a href="#">Reports</a>
-			</div>
-		</nav>
-
+<body>
+    <header>
+	    <div id="menu">
+		    <h1>GST Invoicing</h1>
+		    <ul>
+			    <li id="dropdown"><a>Master
+			    <ul id="dropdown-content">
+			        <li><a onclick="showLoginMaster(); ">Login Master</a></li>
+			        <li><a onclick="">Company Master</a></li>
+			        <li><a onclick="">Customer Master</a></li>
+			        <li><a onclick="">Item Master</a></li>
+			        <li><a onclick="">Year Master</a></li>
+			        <li><a onclick="">Backup Database</a></li>
+			    </ul></a>
+			    </li>
+			    <li><a>Invoicing</a></li>
+			    <li><a>Reports</a></li>
+			    <li><a>Change Password</a></li>
+			    <li><a onclick="showPayment();">Payments</a></li>
+			    <li><a>Exit</a></li>
+		    </ul>
+	    </div>
+	    
 	</header>
+	<div id="lMaster">
+		<h1>Login Master Setup</h1>
+		<button type="button" onclick="showNewUser();">New</button>
+		<button type="button" id="edit" onclick="showEditUser();">Edit</button>
+		<button type="button" id="delete" onclick="">Delete</button>
+		<button type="button" onclick="document.getElementById('lMaster').style.display='none'; ">Close</button>
+		<table>
+			<th>LoginID</th>
+			<th>UserName</th>
+			<th>UserType</th>
+			<th>E-Mail</th>
+			<th>Mobile No.</th>
 
-	<br>
-	<main class="main_space">
-		<div class="myform">
-		    <legend style="font-family: cambria;padding-top: 5px; padding-bottom: 20px; font-size: 30px; padding-left: 260px;"><b>Login:</b></legend>
-		    <div class="login_top_text">Username:<br></div>
-		    <input type="text" name="username" placeholder="enter your username">
-		    <br>
-		    <div class="login_top_text">Email-id:<br></div>
-		    <input type="email-id" name="email-id" placeholder="enter your email-id">
-		    <br>
-		    <div class="login_top_text">Password:<br></div>
-		    <input type="password" name="password" placeholder="enter your password">
-		    <br><br>
-		    <a href="mainpage.html"><input type="submit" value="Login"></a>
+			<tr>
+			<td>php</td>
+			<td>php</td>
+			<td>php</td>
+			<td>php</td>
+			<td>php</td>
 
-		    <div class="register_text"><p>Don't have an account?</p>
-					
+			</tr>
+		</table>
+	</div>
 
-					<div class="my_register">
-						<!-- Button to open the modal login form -->
-						<button class="outer_register_button" onclick="document.getElementById('id01').style.display='block'">Register</button>
+	<div id="newUser">
+	<form>
+  		<h1>Adding New User</h1>
+  		<table>
+ 			<th></th>
+ 			<th></th>
+ 			<tr>
+ 				<td>USER NAME:</td>
+ 				<td><input type="text" name="firstname" id="firstname" placeholder="firstname"></td>
+ 			</tr>
+ 			<tr>
+ 				<td>USER ID:</td>
+ 				<td><input type="text" name="lastname" id="lastname" placeholder="userid"></td>
+ 			</tr>
+ 			<tr>
+ 				<td>PASSWORD:</td>
+ 				<td><input type="password" name="password" id="password" placeholder="enter password"></td>
+ 			</tr>
+ 			<tr>
+ 				<td>CONFIRM PASSWORD:</td>
+ 				<td><input type="password" name="password" id="password" placeholder="enter password"></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td>MAIL ID:</td>
+ 				<td><input type="text" placeholder="mail id" name="mail" ></td>
+ 			</tr>
+  			<tr>
+ 				<td>Mobile  no:</td>
+ 				<td><input type="text" placeholder="mobile no" name="username" id="username"></td>
+ 			</tr>
+ 			<tr>
+ 				<td><input type="submit" value="Save" id="register" > </td>
+ 				<td><input type="button" value="Cancel" onclick="document.getElementById('newUser').style.display='none';"> </td>
+ 			</tr>
+		</table>
+	</form>
 
-						<!-- The Modal -->
-						<div id="id01" class="modal">
-						  	<span onclick="document.getElementById('id01').style.display='none'" 
-												class="close" title="Close Modal">&times;</span>
+	</div>
 
-						  <!-- Modal Content -->
-						  	<form class="modal-content animate" action="#">
-							    <div class="img_container">
-							      <img src="../gst_invoice/images/img_avatar.png" alt="Avatar" class="avatar">
-							    </div>
+	<div id="editUser">
+	<form>
+  		<h1>Editing User Details</h1>
+  		<table>
+ 			<th></th>
+ 			<th></th>
+ 			<tr>
+ 				<td>USER NAME:</td>
+ 				<td><input type="text" name="firstname" id="firstname" placeholder="firstname"></td>
+ 			</tr>
+ 			<tr>
+ 				<td>USER ID:</td>
+ 				<td><input type="text" name="lastname" id="lastname" placeholder="userid"></td>
+ 			</tr>
+ 			<tr>
+ 				<td>PASSWORD:</td>
+ 				<td><input type="password" name="password" id="password" placeholder="enter password"></td>
+ 			</tr>
+ 			<tr>
+ 				<td>CONFIRM PASSWORD:</td>
+ 				<td><input type="password" name="password" id="password" placeholder="enter password"></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td>MAIL ID:</td>
+ 				<td><input type="text" placeholder="mail id" name="mail" ></td>
+ 			</tr>
+  			<tr>
+ 				<td>Mobile  no:</td>
+ 				<td><input type="text" placeholder="mobile no" name="username" id="username"></td>
+ 			</tr>
+ 			<tr>
+ 				<td><input type="submit" value="Save" id="register" > </td>
+ 				<td><input type="button" value="Cancel" onclick="document.getElementById('editUser').style.display='none';"> </td>
+ 			</tr>
+		</table>
+	</form>
 
-							    <div class="container">
-							    	<div>	
-							      		<label for="uname" style="margin-left: 30px;margin-bottom: 10px;"><b>Username:</b></label><br>
-							      		<input type="text" style="width: 95%;margin-bottom: 10px" placeholder="Enter Username" name="uname" required>
-							      	</div>
-							      	<div>
-							      		<label for="email-id" style="margin-left: 30px; margin-bottom: 10px;"><b>Email-id:</b></label><br>
-							      		<input type="email-id" style="width: 95%;margin-bottom: 10px" placeholder="Enter Email-id" name="email-id" required>
-							      	</div>
-							      	<div>
-							      		<label for="psw" style="margin-left: 30px; margin-bottom: 10px;"><b>Password:</b></label><br>
-							      		<input type="password" style="width: 95%; margin-bottom: 10px" placeholder="Enter Password" name="psw" required>
-							      	</div>
-							      <button type="submit" class="inner_register_button">Register</button>
-							      <label>
-							        <input type="checkbox" checked="checked" name="remember"> Remember me
-							      </label>
-							    </div>
+	</div>
 
-							    <div class="container" style="background-color:#f1f1f1; border-radius: 20px; width: 80%;margin-left: 10px; margin-top:30px; margin-bottom: 90px;">
-								      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-								      <span class="psw"><a href="#">Forgot password?</a></span>
-								</div>
-							</form>
-						</div>
-					</div>
+	<div id="payment">
+		<div class="header">
+        	<h1>Payment Details-Sales</h1>
+    	</div>
+    	<div class="sales-btn">
+        	<button type="button" onclick="showSale();">Sales</button>
+    	</div>
+    	<div class="data" align="center">
+        <form>
+            Customer Name
+            <input list="customers" name="customer" id="customer">
+            <datalist id="customers"></datalist>&nbsp;&nbsp;&nbsp;
+            <button>Search</button>&nbsp;&nbsp;&nbsp;
+            <button type="button" onclick="showNewPayment();">New</button>
+            <br>
+            INVOICE NUMBERS
+            <input list="invoicenos" name="invoiceno" id="invoice">
+            <datalist id="invoicenos"></datalist>
+
+        </form>
+    	</div>
+	</div>
+	<div id="paymentNew">
+		<div class="header1" align="center">
+        	<h1>Payment Details-Sales</h1>
+        	<div class="sales-btn1">
+        		<button id="sales">Sales</button>
+        	</div>
+    	</div>
+	    <div class="form">
+	    <form>
+	        <div class="form-left">
+	        Vendor Name
+	        <input list="vendors" name="vendor" id="vendor">
+	        <datalist id="vendors"></datalist><br><br>
+	        Invoice No
+	        <input id="invoice1" name="invoice" type="number">
+	        </div>
+	        <div class="form-right">
+	            Vendor Code
+	            <input id="vendorcode" name="vendorcode" type="number">
+	            <br><br>
+	            Address
+	            <input id="address" name="address" type="text">
+	            <br>
+	            <br>
+	            Grand Total
+	            <input id="total" name="total" type="number">
+	            <br>
+	            <br>
+	            Last Payment
+	            <input id="payment" name="payment" type="number">
+	            <br>
+	            <br>
+	            Amount Paid
+	            <input id="paid" name="paid" type="number">
+	            <br>
+	            <br>
+	            Balance
+	            <input id="balance" name="balance" type="number">
+	            <br>
+	            <br>
+	            Paid Date
+	            <input id="pdate" name="pdate" type="date">
+	            <br>
+	            <br>
+	            Remarks
+	            <input id="remarks" name="remarks" type="text">
+	            <br>
+	            <br>
+	            <button id="sales">Save</button>
+	            <button id="close">Close</button>
+
+	        </div>
+	    </form>
+	    </div>
+	</div>
+	<div id="sale">
+		<div class="header2" align="center">
+	        <h1>Sales Report</h1>
+	        <form>
+	            Customer Name
+	            <input list="customers" name="customer" id="customer">
+	            <datalist id="customers"></datalist><br><br>
+	            From
+	            <input id="fromdate" name="fromdate" type="date">&nbsp;&nbsp;&nbsp;
+	            To &nbsp;
+	            <input id="todate" name="todate" type="date">&nbsp;&nbsp;
+	            <button>Submit</button>
+	            <button>Excel</button>
+	            <button>Close</button>
+	        </form>
+	    </div>
+	</div>
+
+	<div>
+		<form method="post" style="padding:50px;float:right;background-color: white;width:300px;margin-top:70%;">
+		  <p style="font-size:14px;background-color:yellow;">REGISTER</p>
+		 USER ID:<br>
+		  <input type="text" name="username" id="firstname" placeholder="firstname">
+		  <br>
+		 
+		 PASSWORD:<br>
+		  <input type="password" name="password" id="password" placeholder="enter password">
+
+		  <br>
 
 			
-			</div>
-		</div>
+		<input type="SUBMIT" value="Register" id="register"> 
+		<input type="SUBMIT" id="cancel" value="cancel">
+		</form>
+	</div>
 
-	</main>
 	<footer>
 		<div>
 			&copy; -2017 ALL Rights reserved for VITVARA Technologies
 		</div>
-		<div style="width: 70%; padding-left: 180px;">
-			<div>
-				<h4><u>Contact us:</u></h4>
-				<p><u>Address:</u> 5 Cross Dr. 
-							Wheeling, WV 26003
-							70 Ketch Harbour Ave. 
-							Poughkeepsie, NY 12601
-							9584 South St. 
-							Miami Gardens, FL 33056
-							292 Beechwood Lane 
-							Upper Marlboro, MD 20772</p>
-				<p><u>email:</u>support@vitvara.com</p>
-				<p><u>phone:</u> +1-202-555-0151, +1-202-555-0182</p>
-			</div>
+		<button type="button" id="button1" onclick="showContact();">Contact us</button>
+
+		<div id="contact">
+			
+			<u>Address:</u>Vitvara Techologies <br/>
+		#3-25/7, Vinayaka Udaya nagar <br/>
+		Behind KPT Junction, Airport Rd,<br/>
+		Kadri Hills, Mangaluru, Karnataka 575004<br/>
+				<u>E-mail:</u>support@vitvara.com<br/>
+				<u>Phone:</u> <br/>
+					+91 854 8866 224<br/>
+					+91 854 8866 226<br/>
+					+91 854 8866 227
 		</div>
 	</footer>
-
-
-	<script>
-		// Get the modal
-		var modal = document.getElementById('id01');
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
-		  }
-		}
-	</script>
-
 </body>
+<script src="script.js"></script>
+
 </html>

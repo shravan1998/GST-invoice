@@ -1,401 +1,312 @@
-body,html{
+*{
+	margin:0;
+	padding:0;
+}
+body
+{
+	background-image: url("img/logo.png");
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size:200px 200px;
+	background-position: 50% 50%;
+	height:100%;
+}
+h1
+{
+	text-align:center;
+}
+#menu
+{
+	background-color:lightblue;
+	width:100%;
+	height:100px;
+	margin: auto;
+}
+#menu ul li
+{
+	list-style: none;
+	float: left;
+	font-size: 16px;
+	padding:20px;
+	cursor: pointer;
+}
+#menu button
+{
+	float: left;
+	padding: 5px;
+	margin: 5px;
+}
+#menu ul li:hover
+{
+	background-color:blue;
+	color:white;
+	font-weight:bold;
+}
+#dropdown 
+{
+  	position: relative;
+  	display: inline-block;
+}
+#dropdown-content 
+{
+  	display: none;
+  	position: absolute;
+  	background-color: #08c7fc;
+  	min-width: 100%;
+  	z-index: 1;
+  	left: 0;
+  	list-style: none;
+  	margin-top: 20px;
+}
+
+#dropdown-content li {
+  	color: black;
+  	padding: 0px 10px;
+  	text-decoration: none;
+  	display: block;
+}
+#dropdown-content li:hover {background-color: #ddd;}
+
+#dropdown:hover #dropdown-content {display: block;}
+
+#lMaster
+{
+	background-color: lightgrey;
+	display: none;
+	margin: 5% auto;
+	width: 80%;
+	height: auto;		
+}
+#lMaster button
+{
+	background-color: lightgrey;
+	color: blue;
+	margin: 10px 0;
+	padding: 5px 10px;
+}
+#lMaster button:hover
+{
+	background-color: black;
+	color: white;
+}
+#lMaster table
+{
+	border-collapse: collapse;
+	border:1px solid black;
+	margin: auto;
+	background-color: white;
+	width: 100%;
 	height: 100%;
 }
-
-.parallax { 
-  /* The image used */
-  background-image: url("../gst_invoice/images/logo.jpg"); 
-  /* Full height */
-  height: 100%; 
-
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
+#lMaster th
+{
+	border:1px solid black;
+	padding: 10px;
 }
-
-#my_head{
-	background-color: #6A5ACD;
-	border-radius: 20px;
+#lMaster td
+{
+	border:1px solid black;
+}	
+#newUser,#editUser
+{
+	background-color: lightgrey;
+	margin: 5% auto;
+	width: 80%;
+	height: 100%;
+	display: none;
 }
-
-#header_content{
-width: 99%;
-padding-top: 0.5px;
-font-size: 32px;
-font-family: Cinzel,Arial,Helvetica,sans-serif;
-border: 5px dotted black;
-border-radius: 20px;
-}
-
-#header_content h1{
-padding-left: 400px;
-}
-
-#navbar {
-  width:100%;
-  overflow: hidden;
-  background-color: #483D8B;
-  margin-bottom: 20px;
-  border-radius: 20px;
-}
-
-#navbar a{
-  float: left;
-  font-size: 24px;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  margin-left:6px;
-  margin-right: 6px;
-  font-family: Cinzel,Arial,Helvetica,sans-serif;
-}
-
-#navbar a:hover{
-	background-color: red;
-	color: black;
-}
-
-#content{
-	width: 70%;
+#newUser form,#editUser form
+{
 	margin: auto;
-	padding: 10px;
-	font-family: Cinzel,Arial,Helvetica,sans-serif;
-	font-size: 25px;
-	background-color: orange;
-	color: black;
-	border: 1px solid red;
-	border-radius: 20px;
-	margin-bottom: 50px;
-}
-
-#content ul{
-	list-style: none;
-}
-
-#content li{
-	width: 30%;
-	border: 2px solid black;
-	border-radius: 20px;
-	list-style: none;
-	text-decoration: none;
-	margin-left: 270px;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	padding: 10px;
+	display: block;
 	text-align: center;
+	height: 100%;
+	padding: 20px;
+	font-weight: bold;
 }
-
-#content a{
-	text-decoration: none;
-	color: black;
+#newUser table,#editUser table
+{
+	width: 100%;
+	margin: auto;
 }
-
-#content ul li:hover{
-	background-color: #f9f9f9;
-	color: black;
+input[type=text],input[type=password]
+{
+	margin: 5px auto;
+	display: block;
+	width: 50%;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	border-radius: 5px;
+	border-color: yellow;
 }
-
-footer{
-  text-align: center;
-  background-color: #696969;
-  padding: 10px;
-  width: 100%;
-  margin: auto; 
-  font-family: Arial,Helvetica,sans-serif;
-  font-size: 20px;
-  line-height: 1em;
+input[type=submit],input[type=button]
+{
+	margin: 5px auto;
+	padding: 10px;
+	border-radius: 5px;
+	border-color: yellow;
+	font-size: 16px;
+	background-color: black;
+	color: white;
 }
-
-/*-----------------------------------------------------------------*/
-.main_space{
- width: 100%;
- margin-top: 50px;
- margin-bottom: 70px;
+footer
+{
+	margin-top: 100%;
+	position:fixed;
+	bottom:0;
+	background-color: black;
+	color: white;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	padding: 20px 0;
 }
-
-.main_text{
-  padding-left: 20px;
-  width: 65%;
-  font-family: Arial,Helvetica,sans-serif;
-  font-size: 25px;
-  line-height: 1.6em;
+#contact
+{
+	display: none;
+	margin: 20px auto 0 auto;
+	transition: 0.03s;
 }
-
-.bottom_text{
-  padding-left: 20px;
-  width: 65%;
-  font-family: Arial,Helvetica,sans-serif;
-  font-size: 20px;
-  line-height: 1.6em;
-  margin-bottom: 50px;
+#payment,#paymentNew,#sale
+{
+	margin: auto;
+	width: 100%;
+	display: none;
 }
+/*  ALDRIN CSS  */
 
-.myform{
-  border-radius: 20px;
-  width: 50%;
-  padding: 20px;
-  padding-right: 5px;
-  margin: auto;
-  background-color: red;
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
+/*  ASTON CSS  */
 
-.login_top_text{
-  font-family: Cambria,Arial,Helvetica,sans-serif;
-  font-size: 22px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-}
+/*  ATHUL CSS  */
 
-.myform input[type="text"],input[type="email-id"],input[type="password"]{
-  font-size: 20px;
-  font-family: Cambria,Arial,Helvetica,sans-serif;
-  width: 95%;
-  margin-bottom: 10px;
-  padding: 5px;
-  padding-left: 10px;
-  border-style: none;
-  border-radius: 5px;
-}
+/*  MAXIM CSS  */
 
-.myform input[type="submit"]{
-  margin-left: 240px;
-  font-size: 20px;
-  padding: 10px;
-  width: 20%;
-  font-family: Cambria,Arial,Helvetica,sans-serif;
-  border-radius: 10px;
-  border-style: none;
-  background-color: black;
-  color: white;
-}
-
-
-.myform input[type="submit"]:hover{
-  background-color: white;
-  color: black;
-}
-
-.register_text{
-  font-size: 23px;
-  padding-bottom: 5px;
-}
-
-
-
-/* The Modal (background) */
-.my_register .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 90%; /* Full width */
-  height: 90%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-  color: black;
-  margin-bottom: 60px;
-}
-
-
-/* Modal Content/Box */
-.my_register .modal-content {
-  background-color: #fefefe;
-  margin: 5px auto; /* 15% from the top and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  border-radius: 20px;
-}
-
-.my_register input{
-  background-color: #f9f9f9;
-  margin-left: 15px;
-  padding: 10px;
-  margin-top: 7px;
-}
-
-.outer_register_button{
-  margin-left: 240px;
-  font-size: 20px;
-  padding: 10px;
-  width: 20%;
-  font-family: Cambria,Arial,Helvetica,sans-serif;
-  border-radius: 10px;
-  border-style: none;
-  background-color: green;
-  color: white;
-}
-
-.outer_register_button:hover{
-  background-color: #f9f9f9;
-  color: black;
-}
-
-
-.my_register .img_container{
-  width: 300px;
-  margin: auto;
-
-}
-
-.my_register .avatar{
-  width: 50%;
-  margin-left: 70px; 
-  border-radius: 50px;
-  color: black;
-  background-color: red;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.cancelbtn{
-  margin-left: 20px;
-  background-color: black;
-  color: white;
-  width: 20%;
-  padding: 10px 10px;
-  font-size: 18px;
-  border-style: none;
-  border-radius: 20px;
-}
-
-.inner_register_button{
-  font-size: 20px;
-  padding: 10px;
-  width: 20%;
-  font-family: Cambria,Arial,Helvetica,sans-serif;
-  border-radius: 10px;
-  border-style: none;
-  background-color: green;
-  color: white;
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
-.psw{
-  margin-left: 60px;
-  line-height: 1em;
-}
-
-
-/* The Close Button */
-.my_register .close {
-  /* Position it in the top right corner outside of the modal */
-  position: absolute;
-  right: 25px;
-  top: 0; 
-  color: white;
-  font-size: 100px;
-  font-weight: bold;
-}
-
-/* Close button on hover */
-.my_register .close:hover,.my_register.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.my_register .animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-
-/*-------------------------------------------------------------*/
-ul{
-        padding: 20;
-        list-style: none;
-        background: yellow;
+/*  SHRAVAN CSS */
+/*	payment css	*/
+    .header,.data,.sales-btn{
+        background-color: #F0E13D;
+        font-family: sans-serif;
     }
-    ul li{
-        display: inline-block;
-        position: relative;
-        line-height: 10px;
-        text-align: left;
+    .header{
+        padding-bottom: 50px;
+        padding-top:5px;
+        text-align: center;
+        
     }
-    ul li a{
-        display: block;
-        padding: 18px 25px;
-        color: #333;
-        text-decoration: none;
+    .sales-btn{
+        float:right;
     }
-    ul li a:hover{
-        color: #fff;
-        background: #939393;
+    .sales-btn button,.data button{
+        background-color: #45ED17;
+        font-family: sans-serif;
+        /*border:none;*/
+        border-radius: 2px;
+        width:100px;
+        height: 30px;
     }
-    ul li ul.dropdown{
-        min-width: 20% ul li ul.dropdown{
-        min-width: 100%; /* Set width of the dropdown */
-        background: #f2f2f2;
-        display: none;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-    }; /* Set width of the dropdown */
-        background: #f2f2f2;
-        display: none;
-        position: absolute;
-        z-index: 999;
-        left: 0;
+    
+    .data #customer{
+        height:20px;
+        width: 500px;
     }
-    ul li:hover ul.dropdown{
-        display: block;	/* Display the dropdown */
+    #invoice{
+        height:20px;
+        width: 500px;
+        
     }
-    ul li ul.dropdown li{
-        display: block;
+/*	paymentnew css	*/
+	.header1,.sales-btn1{
+        background-color: #F0E13D;
+        
     }
-/*--------------------------*/
+    .header1{
+        padding-bottom: 45px;
+        padding-top:5px;
+        text-align: center;
+        
+    }
+    .sales-btn1{
+        float:right;
+    }
+    #sales{
+        background-color: #45ED17;
+        font-family: sans-serif;
+        /*border:none;*/
+        border-radius: 2px;
+        width:100px;
+        height: 30px;
+    }
+    #close{
+        background-color: #45ED17;
+        font-family: sans-serif;
+        /*border:none;*/
+        border-radius: 2px;
+        width:100px;
+        height: 30px;
+    }
+    .form .form-left{
+        float:left;
+        text-align: justify;
+        padding-top: 10px;
+    }
+    .form .form-right{
+        float:right;
+        text-align: justify;
+        padding-right: 100px;
+        padding-top: 10px;
+    }
+    #vendor{
+        width:500px;
+        height:20px;
+    }
+    #invoice1{
+        width:500px;
+        height:20px;
+    }
+    #vendorcode{
+        width:250px;
+        height: 20px;
+    }
+    #address,#remarks{
+        width:250px;
+        height: 100px;
+    }
+    #total{
+        width:250px;
+        height: 20px;
+    }
+    #payment{
+        width:250px;
+        height: 20px;
+    }
+    #paid{
+        width:250px;
+        height: 20px;
+    }
+    #balance{
+        width:250px;
+        height: 20px;
+    }
+    #pdate{
+        width:250px;
+        height: 20px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*	sales CSS 	*/
+    .header2{
+        background-color: #F0E13D;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-family: sans-serif;
+    }
+    #customer{
+        width:500px;
+        height:20px;
+    }
+    .header2 button{
+        border-radius: 2px;
+        width:100px;
+        height: 30px;
+    }
