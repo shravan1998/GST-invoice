@@ -94,3 +94,21 @@ function showSale()
         x.style.display="none";
       }
 }
+function showCuMaster()
+{
+    var x=document.getElementById("cuMaster");
+      if (x.style.display=="none")
+      {
+        x.style.display="block";
+        
+      } 
+      else 
+      {
+        x.style.display="none";
+      }
+}
+function close(id)
+{
+  var x=id;
+  document.getElementById(x).style.display="none";
+}

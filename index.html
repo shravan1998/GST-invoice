@@ -12,10 +12,10 @@
 			    <li id="dropdown"><a>Master
 			    <ul id="dropdown-content">
 			        <li><a onclick="showLoginMaster(); ">Login Master</a></li>
-			        <li><a onclick="">Company Master</a></li>
-			        <li><a onclick="">Customer Master</a></li>
-			        <li><a onclick="">Item Master</a></li>
-			        <li><a onclick="">Year Master</a></li>
+			        <li><a onclick="showCMaster();">Company Master</a></li>
+			        <li><a onclick="showCuMaster();">Customer Master</a></li>
+			        <li><a onclick="showIMaster();">Item Master</a></li>
+			        <li><a onclick="showYearMaster();">Year Master</a></li>
 			        <li><a onclick="">Backup Database</a></li>
 			    </ul></a>
 			    </li>
@@ -33,7 +33,7 @@
 		<button type="button" onclick="showNewUser();">New</button>
 		<button type="button" id="edit" onclick="showEditUser();">Edit</button>
 		<button type="button" id="delete" onclick="">Delete</button>
-		<button type="button" onclick="document.getElementById('lMaster').style.display='none'; ">Close</button>
+		<button type="button" onclick="close('lMaster');">Close</button>
 		<table>
 			<th>LoginID</th>
 			<th>UserName</th>
@@ -131,12 +131,32 @@
 	</form>
 
 	</div>
+	<!--athul --->
+	<div id="cuMaster" style="background-color: blue;">
+	
+		<table>
+			<tr><p style="font-size: 44px;padding-left:500px;height:100px;"> Customer Master Setup</p>
+		<button style='color:red; height:30px;background-color: yellow;width:10%;' type="button" onclick="showCuNew();">New </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		
+		<button style='color:red; height:30px;width:10%;background-color: yellow;' type="button" onclick="showCuEdit();">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		
 
+		<button style='color:red; height:30px;width:10%;background-color: yellow;' type="button" onclick="showCuDelete();"> Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		
+		<button style='color:red; height:30px;width:10%;background-color: yellow;' type="button" onclick="close('cuMaster99');">Close</button>&nbsp;&nbsp;&nbsp;&nbsp; </tr>
+		</table>
+		
+	</div>
+
+	<!--shravan-->
 	<div id="payment">
-		<div class="header">
+		<div class="header1">
         	<h1>Payment Details-Sales</h1>
     	</div>
-    	<div class="sales-btn">
+    	<div class="sales-btn1">
         	<button type="button" onclick="showSale();">Sales</button>
     	</div>
     	<div class="data" align="center">
@@ -151,7 +171,14 @@
             <input list="invoicenos" name="invoiceno" id="invoice">
             <datalist id="invoicenos"></datalist>
 
-        </form>
+		</form>
+		<table>
+			<thead>
+				<th>Invoice Number</th>
+				<th>Customer Number</th>
+				<th>Total</th>
+			</thead>
+		</table>
     	</div>
 	</div>
 	<div id="paymentNew">
@@ -207,7 +234,17 @@
 
 	        </div>
 	    </form>
-	    </div>
+		</div>
+		<div class="tablesalesnew">
+			<table>
+				<thead>
+					<th>Invoice No</th>
+					<th>Payments Date</th>
+					<th>Payment</th>
+					<th>Balance</th>
+				</thead>
+			</table>
+		</div>
 	</div>
 	<div id="sale">
 		<div class="header2" align="center">
@@ -228,7 +265,7 @@
 	</div>
 
 	<div>
-		<form method="post" style="padding:50px;float:right;background-color: white;width:300px;margin-top:70%;">
+		<form method="post" style="padding:50px;float:right;background-color: white;width:300px;margin-top:30%;">
 		  <p style="font-size:14px;background-color:yellow;">REGISTER</p>
 		 USER ID:<br>
 		  <input type="text" name="username" id="firstname" placeholder="firstname">
@@ -244,6 +281,7 @@
 		<input type="SUBMIT" id="cancel" value="cancel">
 		</form>
 	</div>
+
 
 	<footer>
 		<div>
